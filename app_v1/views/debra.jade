@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .row
+        form(method="POST")
+            .row
+                h1 Configuration
+            .row
+                .medium-4.columns
+                    input#base_url_m(type="text",placeholder="Base URL M")
+                .medium-4.columns
+                    input#base_url_f(type="text",placeholder="Base URL F")
+                .medium-4.columns
+                    input#path_excel(type="text",placeholder="Path fichier excel")
+            .row
+                .large-2.large-offset-10.columns
+                    input#send_new_request_debra.menu.button.secondary(type="submit",value="Valider")
+            
+    .row#resultDebra
+        .row 
+            h1 Liste des URLs
+        .row
+            .medium-12.columns
+                textarea#debra_result(name="debra_result",style="overflow:auto;height:500px;width:1024px")= debraresult
+    
